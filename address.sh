@@ -1,47 +1,80 @@
 package day_7;
 
-public class book {
-	public class addressBook {
-        private String firstname;
-        private String lastname;
-        private String address;
-        private String city;
-        private String state;
-        private int zip;
-        private String phonenumber;
-        private String email;
+import java.util.Scanner;
 
-public addressBook(String firstname, String lastname ,String address, String city, String state, int zip, String phonenumber, String email) {
-
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phonenumber = phonenumber;
-        this.email = email;
+class AddressBook {
+	private String firstName;
+	private String lastName;
+	private String city;
+	private String state;
+	private String pin;
+	private String mobileNo;
+	private String email;
+	public AddressBook(String firstName, String lastName, String city, String state, String pin, String mobileNo,
+			String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.city = city;
+		this.state = state;
+		this.pin = pin;
+		this.mobileNo = mobileNo;
+		this.email = email;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getPin() {
+		return pin;
+	}
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
+	public String getMobileNo() {
+		return mobileNo;
+	}
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	@Override
+	public String toString() {
+		return "AddressBook [firstName=" + firstName + ", lastName=" + lastName + ", city=" + city + ", state=" + state
+				+ ", pin=" + pin + ", mobileNo=" + mobileNo + ", email=" + email + "]";
+	}
+	
 }
-public void contactslist( ) {
 
-        System.out.println("firstname:" +firstname);
-        System.out.println("lastname:"  +lastname);
-        System.out.println("Address:"   +address);
-        System.out.println("City:"      +city);
-        System.out.println("State:"     +state);
-        System.out.println("Zip:"       +zip);
-        System.out.println("Phone Number:" +phonenumber);
-        System.out.println("Email:" +email);
-}
+public class AddressBookSystem {
+	public static void main(String[] args) {
+		
+	}
 
-public void main(String[] args) {
-        addressBook sam = new addressBook("sam", "suman", "hoodi", "banglore", "karnataka", 560048, "6300000000", "sam@gmail.com");
-        sam.contactslist();
-        
-        
-        addressBook Surya = new addressBook("Surya", "kumar", "whitefield", "nellore", "Andhra", 560058, "8007896411", "surya@gmail.com");
-        Surya.contactslist();
-}
-
-}
 }
